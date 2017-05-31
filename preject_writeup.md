@@ -37,7 +37,7 @@ This helps remove any noise from the image. It's an important pre-processing ste
 
 Drawing lines from the detected edges is one of the most important aspects for this project. For two single lines to be drawn over the edges, one for each line of the lane (left and right), the draw_line() is function is modified in the following way:
 
-  DRAW-LINE ALGORITHM
+  ### DRAW-LINE ALGORITHM
   
   a. To extrapolate the lines returned from the hough lines and create two single lines, two endpoints (x_min, y_min, x_max. y_max) for the two lane lines and their corresponding  slope values (positive_slope, negative_slope) and intercepts (positive_intercept, negative_intercept) are needed. This forms the problem statement for the algorithm.
   
