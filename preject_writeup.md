@@ -13,6 +13,10 @@ The goals for this project was to create a pipeline that finds lane lines on the
 ### 1. The Approach
 
 1. The image is first converted to grayscale.
+
+[image2]: ./test_images_1/SolidWhiteCurve.jpg "Original"
+![alt text][image2]
+
 2. The grayed image is then soomthed out using the opencv library's gaussianBlur function.
 3. Then the edges in the image are detected by passing the smoothed out gray image onto the opencv's canny function. 
 Canny function works using the intensity gradients of the image, with detecting edges (nothing but collection of points in really close quarter having intensity gradient over a certain a threshold given as an input to the algorithm.)
