@@ -28,9 +28,17 @@ The goals for this project was to create a pipeline that finds lane lines on the
 ![alt text][image4]
 
 Canny function works using the intensity gradients of the image, with detecting edges (nothing but collection of points in really close quarter having intensity gradient over a certain a threshold given as an input to the algorithm.)
-4. After the edges have been found out, only that portion of the image needs to be taken for further processing having road lane lines. 
-This part is achieved by masking the 
+
+4. After the edges have been found out, only that portion of the image needs to be taken for further processing having road lane lines.
+
+[image5]: ./screenshots/polygon.png "Polygon shape to take the portion from the image having lane lines"
+![alt text][image5]
+This part is achieved by masking the
+
 5. Now that the image only has the canny edges for the lane lines portion and the rest of it blacked out, lines are drawn from those detected edges.
+
+[image6]: ./screenshots/hough.png "Houh lines"
+![alt text][image6]
 Drawing lines from the detected edges is one of the most important aspects for this project. For two single lines to be drawn over the edges, one for each line of the lane (left and right), the draw_line() is function is modified in the following way:
   5. a. The array of lines returned from the hough_lines() function is iterated upon and for each line, the slope is calculated and stored in spearate arrays for positive and negative slopes.
   5. b. Whether the slope is positive or negative, it can be inferred if the line belongs to the left line of the lane or the right line.   
@@ -43,7 +51,11 @@ Drawing lines from the detected edges is one of the most important aspects for t
   5. i. The y_min can be found out by taking the comparing all the y values in all the lines and taking the minimum value.
   5. j. Now x_min and x_max can be found out by just fitting all the peviously found parameters in an equation of the line.
   5. k. The line can now be drawn over the lane lines.
+
 6. This image is now combined with the original image and the returned image would be the original one, with the algorithm generated lane lines drawn over it.
+
+[image7]: ./screenshots/result.png "Final image with generated lane lines imprinted on image"
+![alt text][image7]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
