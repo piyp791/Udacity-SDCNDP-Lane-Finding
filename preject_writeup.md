@@ -71,14 +71,14 @@ Drawing lines from the detected edges is one of the most important aspects for t
 ![alt text][image7]
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings
 
 1. The method used to detect the lane lines is not quite robust. A change of scene, or even a change in the resolution of the image could throw it off, thus rendering the entire pipeline useless.
 
 2. As noticed in the challenge.mp4 video, the canny edge detection of the algorithm is thrown off by light. The noise increases substantially, which makes it hard for the algorithm to detect lane lines.
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements
 
 1. For the current pipeline, the lane line area is being detected using quite ad-hoc solution which might not work for all the cases. This could be improved by using some sort of regresison analysis over the coordinates of lane lines and subsequent position and shape of the area covering the entire lane.
 
