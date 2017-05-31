@@ -80,7 +80,7 @@ Drawing lines from the detected edges is one of the most important aspects for t
 [image8]: ./screenshots/light.gif "Left lane line thrown off by the noise generated due to light"
 ![alt text][image8]
 
-Notice the noise near the left lane.
+### Notice the noise near the left lane.
 
 [image9]: ./screenshots/light-canny.png "Noise in the canny detected image increases upon entering the light region"
 ![alt text][image9]
@@ -88,6 +88,6 @@ Notice the noise near the left lane.
 
 ### 3. Possible improvements
 
-1. For the current pipeline, the lane line area is being detected using quite ad-hoc solution which might not work for all the cases. This could be improved by using some sort of regresison analysis over the coordinates of lane lines and subsequent position and shape of the area covering the entire lane.
+1. For the current pipeline, the lane line area is being detected using an ad-hoc solution which might not work for all the cases. This could be improved by using some sort of regresison analysis over the coordinates of lane lines and the subsequent position and shape of the area covering the lane lines.
 
-1. Another improvement for the pipeline could be for slope detection and handling. Right now, the pipeline cant not handle much noise, especially thrown by light. Use of pattern recognition could be used to apply better thresholds over accepted values of slope for lane lines.  
+1. Another improvement for the pipeline could be for slope detection and handling. Right now, the pipeline can not handle much noise, especially thrown by light. Use of pattern recognition could be used to apply better thresholds over accepted values of slope for lane lines.  
