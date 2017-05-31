@@ -14,11 +14,19 @@ The goals for this project was to create a pipeline that finds lane lines on the
 
 1. The image is first converted to grayscale.
 
-[image2]: ./screenshots/gray.png "Original"
+[image2]: ./screenshots/gray.png "Grayscale image"
 ![alt text][image2]
 
 2. The grayed image is then soomthed out using the opencv library's gaussianBlur function.
+
+[image3]: ./screenshots/gray_smooth.png "Smoothed out grayscale"
+![alt text][image3]
+
 3. Then the edges in the image are detected by passing the smoothed out gray image onto the opencv's canny function. 
+
+[image4]: ./screenshots/canny.png "Canny Edge Detection"
+![alt text][image4]
+
 Canny function works using the intensity gradients of the image, with detecting edges (nothing but collection of points in really close quarter having intensity gradient over a certain a threshold given as an input to the algorithm.)
 4. After the edges have been found out, only that portion of the image needs to be taken for further processing having road lane lines. 
 This part is achieved by masking the 
