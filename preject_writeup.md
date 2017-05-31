@@ -10,7 +10,7 @@ The goals for this project was to create a pipeline that finds lane lines on the
 
 1. The original image is first converted to grayscale.
 
-[image1]: ./screenshots/gray.png "Grayscale image"
+[image1]: ./screenshots/gray.png "Grayscale image"  
 ![alt text][image1]
 
 2. The grayed out image is then soomthed out using the opencv library's gaussianBlur function.
@@ -39,13 +39,13 @@ Drawing lines from the detected edges is one of the most important aspects for t
 
   ### DRAW-LINE ALGORITHM
   
-  a. To extrapolate the lines returned from the hough lines and create two single lines, two endpoints (x_min, y_min, x_max. y_max) for the two lane lines and their corresponding  slope values (positive_slope, negative_slope) and intercepts (positive_intercept, negative_intercept) are needed. This forms the problem statement for the algorithm.
+    a. To extrapolate the lines returned from the hough lines and create two single lines, two endpoints (x_min, y_min, x_max. y_max) for the two lane lines and their corresponding  slope values (positive_slope, negative_slope) and intercepts (positive_intercept, negative_intercept) are needed. This forms the problem statement for the algorithm.
   
-  b. The array of lines returned from the hough_lines() function is iterated upon and for each line, the slope is calculated and stored in spearate arrays for positive and negative slopes.
+    b. The array of lines returned from the hough_lines() function is iterated upon and for each line, the slope is calculated and stored in spearate arrays for positive and negative slopes.
   
-  c. From whether the slope is positive or negative, it can be inferred if the line belongs to the left line of the lane or the right line.
+    c. From whether the slope is positive or negative, it can be inferred if the line belongs to the left line of the lane or the right line.
   
-  d. To remove noisy lines pertaining to edges not belonging to any lane, but still within the lane area, a threshold is defined for the value of the slope acceptable for the algorithm.
+    d. To remove noisy lines pertaining to edges not belonging to any lane, but still within the lane area, a threshold is defined for the value of the slope acceptable for the algorithm.
   
   e. For each line, the intercept is also calculated and stored.
   
