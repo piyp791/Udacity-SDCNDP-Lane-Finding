@@ -8,7 +8,7 @@ The goals for this project was to create a pipeline that finds lane lines on the
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
 
-
+![alt text][image1]
 
 ### 1. The Approach
 
@@ -34,19 +34,14 @@ Drawing lines from the detected edges is one of the most important aspects for t
 6. This image is now combined with the original image and the returned image would be the original one, with the algorithm generated lane lines drawn over it.
 
 
-![alt text][image1]
-
-
 ### 2. Identify potential shortcomings with your current pipeline
 
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+1. The method used to detect the lane lines is not quite robust. A change of scene could thrwo it off thus rendering the entire pipeline useless.
+2. As noticed in the challenge.mp4 video, the canny edge detection of the algorithm is thrown off by light. The noise increases substantially, which makes it hard for the algorithm to detect lane lines.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+For the current pipeline, the lane line area is being detected using quite ad-hoc solution which might not work for all the cases. This could be improved by using some sort of regresison analysis over the coordinates of lane lines and subsequent position and shape of the area covering the entire lane.
 
-Another potential improvement could be to ...
+Another improvement for the pipeline could be for slope detection and handling. Right now, the pipeline cant not handle much noise, especially thrown by light. Use of pattern recognition could be used to apply better thresholds over accepted values of slope for lane lines.  
