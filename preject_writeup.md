@@ -80,6 +80,8 @@ Drawing lines from the detected edges is one of the most important aspects for t
 [image8]: ./screenshots/light.gif "Left lane line thrown off by the noise generated due to light"
 ![alt text][image8]
 
+Notice the noise near the left lane.
+
 [image9]: ./screenshots/light-canny.png "Noise in the canny detected image increases upon entering the light region"
 ![alt text][image9]
 
