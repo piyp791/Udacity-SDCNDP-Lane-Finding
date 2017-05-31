@@ -78,6 +78,10 @@ Drawing lines from the detected edges is one of the most important aspects for t
 2. As noticed in the challenge.mp4 video, the canny edge detection of the algorithm is thrown off by light. The noise increases substantially, which makes it hard for the algorithm to detect lane lines.
 
 
+[image8]: ./screenshots/light.gif "Left lane line thrown off by the noise generated due to light"
+![alt text][image8]
+
+
 ### 3. Possible improvements
 
 1. For the current pipeline, the lane line area is being detected using quite ad-hoc solution which might not work for all the cases. This could be improved by using some sort of regresison analysis over the coordinates of lane lines and subsequent position and shape of the area covering the entire lane.
