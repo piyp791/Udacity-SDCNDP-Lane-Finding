@@ -14,7 +14,7 @@ The goals for this project was to create a pipeline that finds lane lines on the
 
 1. The image is first converted to grayscale.
 
-[image2]: ./test_images_1/SolidWhiteCurve.jpg "Original"
+[image2]: ./test_images_1/solidWhiteCurve.jpg "Original"
 ![alt text][image2]
 
 2. The grayed image is then soomthed out using the opencv library's gaussianBlur function.
