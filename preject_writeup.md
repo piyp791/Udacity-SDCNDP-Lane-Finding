@@ -1,8 +1,8 @@
 # **Finding Lane Lines on the Road** 
 
-Lane detection is one of the most important aspects of autonomous navigation. It is the first step in enabling the vehicle to visualize and then make sense or its environment.
+Lane detection is one of the most important aspects of autonomous navigation. It is the first step in enabling the vehicle to visualize and then make sense of its environment.
 
-The goals for this project was to create a pipeline that finds lane lines on the road.
+The goals of this project was to create a pipeline that finds lane lines on the road.
 
 [//]: # (Image References)
 
@@ -13,14 +13,14 @@ The goals for this project was to create a pipeline that finds lane lines on the
 [image1]: ./screenshots/gray.png "Grayscale image"  
 ![alt text][image1]
 
-2. The grayed out image is then soomthed out using the opencv library's gaussianBlur function.
+2. The grayed out image is then smoothed out using the opencv library's gaussianBlur function.
 
 [image2]: ./screenshots/gray_smooth.png "Smoothed out grayscale image"
 ![alt text][image2]
 
 This helps remove any noise from the image. It's an important pre-processing step for canny edge detection.
 
-3. Then the edges in the image are detected by passing the smoothed out gray image onto the opencv's canny function. 
+3. Then the edges in the image are detected by passing the smoothed out gray image into the opencv's canny function. 
 
 [image3]: ./screenshots/canny.png "Canny Edge Detection"
 ![alt text][image3]
@@ -38,7 +38,7 @@ This helps remove any noise from the image. It's an important pre-processing ste
 [image6]: ./screenshots/hough.png "Hough lines drawn for the lane lines"
 ![alt text][image6]
 
-Drawing lines from the detected edges is one of the most important aspects for this project. For two single lines to be drawn over the edges, one for each line of the lane (left and right), the draw_line() is function is modified in the following way:
+Drawing lines from the detected edges is one of the most important aspects for this project. For two single lines to be drawn over the edges, one for each line of the lane (left and right), the draw_line() function is modified in the following way:
 
   ### DRAW-LINE ALGORITHM
   
@@ -58,7 +58,7 @@ Drawing lines from the detected edges is one of the most important aspects for t
   
   h. Similarly, the intercept for both lane lines can be calculated by taking the mean of the stored intercepts.
   
-  i. The y_min can be found out by taking the comparing all the y values in all the lines and taking the minimum value.
+  i. The y_min can be found out by comparing all the y values in all the lines and taking the minimum value.
   
   j. Now x_min and x_max can be found out by just fitting all the peviously found parameters in an equation of the line.
   
