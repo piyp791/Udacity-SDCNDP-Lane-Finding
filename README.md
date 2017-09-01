@@ -27,5 +27,5 @@ To start Jupyter in your browser, use terminal to navigate to your project direc
 
 `> jupyter notebook`
 
-A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to run the project.  
+A browser window will appear showing the contents of the current directory.  Click on the file called "Lane-Finding-Project.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to run the project.  
 
