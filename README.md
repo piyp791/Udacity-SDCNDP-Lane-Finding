@@ -13,7 +13,7 @@ In this project you will detect lane lines in images using Python and OpenCV.  O
 Project Approach and Results
 ---
 
-http://thebotspeaks.com/Udacity-Self-Driving-Car-Nanodegree-Program-Lane-Finding-Project/
+https://bitsandmusic.com/post/lane-finding-for-self-driving-cars/
 
 
 The Project Setup
